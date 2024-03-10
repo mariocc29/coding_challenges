@@ -22,8 +22,7 @@
 
 function isPalindrome(string $string): bool {
   $cleanString = preg_replace('/[^a-z]/', '', strtolower($string));
-  $palindrome = array_reverse(str_split($cleanString));
-  return join($palindrome) == $cleanString;
+  return strrev($cleanString) == $cleanString;
 }
 
 ## Unit Test
